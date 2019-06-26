@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>727</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>银行卡识别</string>
+  </property>
+  <property name="toolTipDuration">
+   <number>-1</number>
+  </property>
+  <property name="statusTip">
+   <string>银色子弹</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">border-image: url(:/newPrefix/image/background.png);</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Triangular</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1281</width>
+      <height>701</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-color: rgb(0, 0, 255);
+font: 11pt &quot;Arial&quot;;
+image: url(:/newPrefix/image/background.png);
+background-image: url(:/newPrefix/image/background.png);
+border-image: url(:/newPrefix/image/background.png);
+color: rgb(255, 0, 0);
+font: 14pt &quot;Arial&quot;;
+border-top-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 0, 0, 255), stop:0.339795 rgba(255, 0, 0, 255), stop:0.339799 rgba(255, 255, 255, 255), stop:0.662444 rgba(255, 255, 255, 255), stop:0.662469 rgba(0, 0, 255, 255), stop:1 rgba(0, 0, 255, 255));
+background-color: rgb(200, 175, 159);</string>
+       </property>
+       <property name="tabPosition">
+        <enum>QTabWidget::South</enum>
+       </property>
+       <property name="tabShape">
+        <enum>QTabWidget::Triangular</enum>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <property name="elideMode">
+        <enum>Qt::ElideNone</enum>
+       </property>
+       <property name="documentMode">
+        <bool>true</bool>
+       </property>
+       <property name="tabsClosable">
+        <bool>true</bool>
+       </property>
+       <property name="movable">
+        <bool>true</bool>
+       </property>
+       <property name="tabBarAutoHide">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>功能演示</string>
+        </attribute>
+        <widget class="QLineEdit" name="lineEdit_url">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>40</y>
+           <width>419</width>
+           <height>61</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QWidget" name="horizontalLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>690</x>
+           <y>30</y>
+           <width>321</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QPushButton" name="pushButton_run">
+            <property name="statusTip">
+             <string>点击按钮开始识别</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 16pt &quot;Arial&quot;;
+border-color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>检测</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_in">
+            <property name="statusTip">
+             <string>点击按钮上传文档</string>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 16pt &quot;Arial&quot;;
+border-color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>上传</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>50</y>
+           <width>71</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 16pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>路径：</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="horizontalLayoutWidget_3">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>110</y>
+           <width>1281</width>
+           <height>531</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_out">
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; color:#0000ff;&quot;&gt;输出结果&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="textFormat">
+             <enum>Qt::AutoText</enum>
+            </property>
+            <property name="scaledContents">
+             <bool>false</bool>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_init">
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="midLineWidth">
+             <number>0</number>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; color:#0000ff;&quot;&gt;原始图片&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_2">
+        <attribute name="title">
+         <string>模型具体信息</string>
+        </attribute>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>301</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>银行卡识别主要参数详情：</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>670</x>
+           <y>20</y>
+           <width>91</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>请选择：</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="horizontalLayoutWidget_6">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>80</y>
+           <width>1291</width>
+           <height>561</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QLabel" name="label_para">
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="midLineWidth">
+             <number>0</number>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; color:#0000ff;&quot;&gt;详参：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_paraImage">
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="midLineWidth">
+             <number>0</number>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; color:#0000ff;&quot;&gt;参数图像&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="horizontalLayoutWidget_4">
+         <property name="geometry">
+          <rect>
+           <x>760</x>
+           <y>0</y>
+           <width>441</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QRadioButton" name="radioButton_para1">
+            <property name="statusTip">
+             <string>点击后显示该参数图像</string>
+            </property>
+            <property name="text">
+             <string>参数1</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton_para2">
+            <property name="statusTip">
+             <string>点击后显示该参数图像</string>
+            </property>
+            <property name="text">
+             <string>参数2</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton_para3">
+            <property name="statusTip">
+             <string>点击后显示该参数图像</string>
+            </property>
+            <property name="text">
+             <string>参数3</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton_para4">
+            <property name="statusTip">
+             <string>点击后显示该参数图像</string>
+            </property>
+            <property name="text">
+             <string>参数4</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_5">
+        <attribute name="title">
+         <string>反馈交互</string>
+        </attribute>
+        <widget class="QLabel" name="label_13">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>211</width>
+           <height>71</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 14pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>识别有误的图片：</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_bugImage">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>636</width>
+           <height>461</height>
+          </rect>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="midLineWidth">
+          <number>0</number>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; color:#0000ff;&quot;&gt;请上传识别有误的银行卡照片&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_bugIn">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>620</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>上传有问题的银行卡照片</string>
+         </property>
+         <property name="text">
+          <string>上传</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_cut">
+         <property name="geometry">
+          <rect>
+           <x>290</x>
+           <y>620</y>
+           <width>111</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="mouseTracking">
+          <bool>false</bool>
+         </property>
+         <property name="statusTip">
+          <string>当点击该button时，自动切割识别有误的数字部分</string>
+         </property>
+         <property name="text">
+          <string>切割</string>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+         <property name="default">
+          <bool>false</bool>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_bugsubmit">
+         <property name="geometry">
+          <rect>
+           <x>520</x>
+           <y>620</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>上传至训练集，继续训练，提高模型准确度</string>
+         </property>
+         <property name="text">
+          <string>提交</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_15">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>560</y>
+           <width>151</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>错误数字号码：</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_bugNumber">
+         <property name="geometry">
+          <rect>
+           <x>300</x>
+           <y>560</y>
+           <width>151</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="statusTip">
+          <string>请手动输入有误的数字</string>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="textEdit_advice">
+         <property name="geometry">
+          <rect>
+           <x>650</x>
+           <y>70</y>
+           <width>631</width>
+           <height>271</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_16">
+         <property name="geometry">
+          <rect>
+           <x>650</x>
+           <y>0</y>
+           <width>481</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 14pt &quot;Arial&quot;;
+color: rgb(255, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>请为我们的软件提供您的建议，便于我们优化：</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_cancel">
+         <property name="geometry">
+          <rect>
+           <x>770</x>
+           <y>420</y>
+           <width>141</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>取消</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_advice">
+         <property name="geometry">
+          <rect>
+           <x>1020</x>
+           <y>420</y>
+           <width>131</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>提交</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="../test1/background.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton_run</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>runModel()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>734</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>716</x>
+     <y>775</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_in</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openImage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1010</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>933</x>
+     <y>773</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_bugIn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openImage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>138</x>
+     <y>651</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>126</x>
+     <y>811</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_para1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>paraImage1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>791</x>
+     <y>41</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>790</x>
+     <y>-40</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_para2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>paraImage2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>925</x>
+     <y>46</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>921</x>
+     <y>-42</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_para3</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>paraImage3()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1011</x>
+     <y>43</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1024</x>
+     <y>-46</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_para4</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>paraImage4()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1141</x>
+     <y>32</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1136</x>
+     <y>-53</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>openImage()</slot>
+  <slot>paraImage4()</slot>
+ </slots>
+</ui>
